@@ -1,0 +1,11 @@
+<p>This is the partial for view 2.</p>
+<p>
+            es gibt {{scope.preise.length}} Preise
+            <table>
+                <tr ng-repeat="preis in preise">
+                    <td>{{preis.name}}</td><td>{{preis.std_1}}</td>
+                </tr>
+            </table>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>

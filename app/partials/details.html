@@ -1,0 +1,36 @@
+<p>
+
+<input ng-model="sieb" type="text"/>
+Es gibt {{tarife.length}} Tarife.<br/>
+Es gibt {{abschnitte.length}} Abschnitte:
+<ul ng-show="abschnitte.length > 1"> 
+    <li ng-repeat="ab in abschnitte.cache ">{{ab.name}} von {{ab.von}} - {{ab.bis}}</li>
+</ul>
+<ul ng-show="tarife.length > 1"> 
+    <li ng-repeat="tr in tarifgruppen | limitTo:200 ">{{tr.tarifgruppe_name}}</li>
+</ul>
+<!--
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>Klasse-ID</th>
+        <th>Klasse</th>
+        <th ng-repeat="ab in abschnitte.cache">Stunde <span ng-show="abschnitte.length > 1">{{ab.name}}</span></th>
+    </tr>
+    <tr ng-repeat="preis in tarife | filter:{klasse:sieb}">
+        <td>{{preis.id}}</td>
+        <td>{{preis.klasse_id}}</td>
+        <td>{{preis.klasse}}</td>
+        <td ng-repeat="ab in abschnitte.cache"> <input type="text" size="10" waehrung ng-model="preise[preis['id']].dat[ab.key]" /> €</td>
+    </tr>
+    <tr ng-repeat="preis in tarife | filter:sieb">
+        <td>{{preis.id}}</td>
+        <td>{{preis.klasse_id}}</td>
+        <td>{{preis.klasse}}</td>
+        <td ng-repeat="ab in abschnitte.cache">{{preise[preis['id']].dat[ab.key]}} &euro;</td>
+    </tr>
+</table>
+-->
+Showing of 'interpolate' filter:
+{{ 'Current version is v%VERSION%.' | interpolate }}
+</p>

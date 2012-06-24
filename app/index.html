@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>Preispflege HAL2</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+    <h2>Tarifpflege HAL2 - Version MG</h2>
+    <div ng-app="myApp" ng-controller="TarifCtrl">
+        <ul class="menu">
+            <!-- <li><a href="#/view1">view1</a></li> -->
+            <li><a href="#/details">details</a></li>
+        </ul>
+
+        <div ng-view></div>
+        <h2>Rohdaten: </h2>
+        <!--
+<ul> 
+    <li ng-repeat="ta in tarife">{{ta.tarif_id}} / {{ta.klasse_id}} : {{ta.interne_kennzeichnung}}</li>
+</ul>
+<table border="1">
+    <tr>
+        <th ng-repeat="titel in heads">Feld <br/>{{titel}}</th>
+    </tr>
+    <tr ng-repeat="tarif in tarife">
+        <td ng-repeat="titel in heads">{{tarif[titel]}}</td>
+    </tr>
+</table>
+-->
+        <div>HAL2-Preispflege: v<span app-version></span></div>
+
+        <script src="lib/jquery/jquery-1.7.1.min.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-locale_de-de.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+    </div>
+</body>
+</html>
